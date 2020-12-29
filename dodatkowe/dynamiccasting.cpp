@@ -38,5 +38,5 @@ int main()
         std::cout << "WOW" << std::endl;
     }
     Player* p1 = dynamic_cast<Player*>(actuallyPlayer);
-
+    std::cout << "Wow" << std::endl;
 }
