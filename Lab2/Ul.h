@@ -1,6 +1,7 @@
 #ifndef UL_H_
 #define UL_H_
 #include <string>
+#include <iostream>
 #include <vector>
 
 class Ul{

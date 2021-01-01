@@ -46,16 +46,16 @@ Ul::Ul(const Ul &ul) : Ul()
     *nazwisko_wlasciciela = *ul.nazwisko_wlasciciela;
 }
 
-Ul::Ul(const Ul &&ul)
-{
-    liczba_pszczol = std::move(ul.liczba_pszczol);
-    x = std::move(ul.x);
-    y = std::move(ul.y);
-    ilosc_miodu = std::move(ul.ilosc_miodu);
-    nazwa_pasieki = std::move(ul.nazwa_pasieki);
-    imie_wlasciciela = std::move(ul.imie_wlasciciela);
-    nazwisko_wlasciciela = std::move(ul.nazwisko_wlasciciela);
-}
+Ul::Ul(const Ul &&ul):
+    liczba_pszczol(std::move(ul.liczba_pszczol)),
+    x(std::move(x)),
+    y(std::move(y)),
+    ilosc_miodu(std::move(ilosc_miodu)),
+    nazwa_pasieki(std::move(nazwa_pasieki)),
+    imie_wlasciciela(std::move(imie_wlasciciela)),
+    nazwisko_wlasciciela(std::move(nazwisko_wlasciciela))
+{}
+
 
 bool Ul::zmiana_liczby_pszczol(int _liczba)
 {
@@ -130,6 +130,7 @@ std::string Ul::odczytaj_nazwisko_wlasciciela() const
 
 Ul::~Ul()
 {
+    std::cout << this->imie_wlasciciela << std::endl;
     delete this->liczba_pszczol;
     delete this->x;
     delete this->y;
@@ -137,4 +138,6 @@ Ul::~Ul()
     delete this->nazwa_pasieki;
     delete this->imie_wlasciciela;
     delete this->nazwisko_wlasciciela;
+    
+    std::cout << "Usunieto obiekt" << std::endl;
 }

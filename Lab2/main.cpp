@@ -98,10 +98,13 @@ int main()
     std::cout << "Imie: " << imie << " Nazwisko: " << nazwisko << std::endl;
     std::cout << std::endl;
 
-    int zmienna = 999;
-    funkcja_konw(999);
-    std::cout << std::endl;
+    // int zmienna = 999;
+    // funkcja_konw(999);
+    // std::cout << std::endl;
 
+    //ul1.~Ul();
+
+    return 0;
     Ul_struktura ul2;
     ul2.ilosc_miodu = new float;
     *ul2.ilosc_miodu = 6.66;
