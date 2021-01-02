@@ -1,5 +1,7 @@
 #include "Ul.h"
 
+// konstruktor domyślny inicjalizujący wszystkie wskaźniki
+// z użyciem listy inicjalizacyjnej
 Ul::Ul() : liczba_pszczol{nullptr},
            x{nullptr},
            y{nullptr},
@@ -10,6 +12,8 @@ Ul::Ul() : liczba_pszczol{nullptr},
 {
 }
 
+// konstruktor zdolny do konwertowania obiektów typu jednego z pól
+// klasy na obiekt implementowanej klasy
 Ul::Ul(int _startowa_liczba_pszczol) : Ul()
 {
     liczba_pszczol = new int;
@@ -28,6 +32,7 @@ Ul::Ul(int _startowa_liczba_pszczol) : Ul()
     *nazwisko_wlasciciela = "Badio";
 }
 
+// konstruktor kopiujący dokonujący głębokiej kopii
 Ul::Ul(const Ul &ul) : Ul()
 {
     liczba_pszczol = new int;
@@ -46,19 +51,20 @@ Ul::Ul(const Ul &ul) : Ul()
     *nazwisko_wlasciciela = *ul.nazwisko_wlasciciela;
 }
 
-Ul::Ul(const Ul &&ul):
-    liczba_pszczol(std::move(ul.liczba_pszczol)),
-    x(std::move(x)),
-    y(std::move(y)),
-    ilosc_miodu(std::move(ilosc_miodu)),
-    nazwa_pasieki(std::move(nazwa_pasieki)),
-    imie_wlasciciela(std::move(imie_wlasciciela)),
-    nazwisko_wlasciciela(std::move(nazwisko_wlasciciela))
-{}
-
+// konstruktor przenoszący
+Ul::Ul(const Ul &&ul) : liczba_pszczol(std::move(ul.liczba_pszczol)),
+                        x(std::move(ul.x)),
+                        y(std::move(ul.y)),
+                        ilosc_miodu(std::move(ul.ilosc_miodu)),
+                        nazwa_pasieki(std::move(ul.nazwa_pasieki)),
+                        imie_wlasciciela(std::move(ul.imie_wlasciciela)),
+                        nazwisko_wlasciciela(std::move(ul.nazwisko_wlasciciela))
+{
+}
 
 bool Ul::zmiana_liczby_pszczol(int _liczba)
 {
+    this->log("zmiana_liczby_pszczol");
     if (_liczba >= -100 && _liczba <= 100 && *(this->liczba_pszczol) + _liczba >= 0)
     {
         *liczba_pszczol += _liczba;
@@ -69,6 +75,7 @@ bool Ul::zmiana_liczby_pszczol(int _liczba)
 
 int Ul::odczytaj_liczbe_pszczol() const
 {
+    
     return *liczba_pszczol;
 }
 
@@ -128,16 +135,17 @@ std::string Ul::odczytaj_nazwisko_wlasciciela() const
     return *nazwisko_wlasciciela;
 }
 
+// destruktor
 Ul::~Ul()
 {
-    std::cout << this->imie_wlasciciela << std::endl;
-    delete this->liczba_pszczol;
-    delete this->x;
-    delete this->y;
+
+    delete liczba_pszczol;
+    delete x;
+    delete y;
     delete this->ilosc_miodu;
     delete this->nazwa_pasieki;
     delete this->imie_wlasciciela;
     delete this->nazwisko_wlasciciela;
-    
+
     std::cout << "Usunieto obiekt" << std::endl;
 }

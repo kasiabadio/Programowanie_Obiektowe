@@ -6,11 +6,14 @@
 class Logger{
 public:
     Logger();
+    Logger(bool _debug);
     void log(std::string _znaki);
     ~Logger();
+    
 
 protected:
     std::string *znaki;
+    bool can_log;
 };
 
 

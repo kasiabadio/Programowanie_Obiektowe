@@ -98,50 +98,45 @@ int main()
     std::cout << "Imie: " << imie << " Nazwisko: " << nazwisko << std::endl;
     std::cout << std::endl;
 
-    // int zmienna = 999;
-    // funkcja_konw(999);
-    // std::cout << std::endl;
+    // punkt 15 - wywołany zostaje konstruktor kopiujący
+    std::cout << "*Wywolanie konstruktora kopiujacego*" << std::endl;
+    funkcja_konw(ul1);
 
-    //ul1.~Ul();
+    // punkt 16 - wywołany zostaje konstruktor przenoszący
+    std::cout << "*Wywolanie konstruktora przenoszacego*" << std::endl;
+    funkcja_konw(std::move(ul1));
 
-    return 0;
-    Ul_struktura ul2;
-    ul2.ilosc_miodu = new float;
-    *ul2.ilosc_miodu = 6.66;
-    ul2.x = new int;
-    *ul2.x = 4;
-    ul2.y = new int;
-    *ul2.y = 6;
-    ul2.liczba_pszczol = new int;
-    *ul2.liczba_pszczol = 45;
-    ul2.nazwa_pasieki = new std::string;
-    *ul2.nazwa_pasieki = "Pasieka miododajna";
-    ul2.imie_wlasciciela = new std::string;
-    *ul2.imie_wlasciciela = "Hanka";
-    ul2.nazwisko_wlasciciela = new std::string;
-    *ul2.nazwisko_wlasciciela = "Mostowiak";
-    std::cout << *ul2.ilosc_miodu << std::endl;
-    std::cout << *ul2.x << std::endl;
-    std::cout << *ul2.y << std::endl;
-    std::cout << *ul2.liczba_pszczol << std::endl;
-    std::cout << *ul2.nazwa_pasieki << std::endl;
-    std::cout << *ul2.imie_wlasciciela << std::endl;
-    std::cout << *ul2.nazwisko_wlasciciela << std::endl;
+    // punkt 17 - wywołany zostaje konstruktor zdolny 
+    // do konwertowania obiektów typu jednego z pól klasy na obiekt implementowanej klasy
+    std::cout << "*Wywolanie konstruktora konwertujacego*" << std::endl;
+    funkcja_konw(999);
     std::cout << std::endl;
 
+    
     Ul ul3(100);
 
-    //const lvalue referencja moze przyjac zarowno lwartosci jak i rwartosci: przyjmuje ul3 jak i 3000
+    //const lvalue referencja moze przyjac zarowno lwartosci jak i rwartosci: przyjmuje ul3, std::move(ul3) jak i 3000
+    std::cout << "*funkcja_lvalue*" << std::endl;
     funkcja_lvalue(ul3);
+    funkcja_lvalue(std::move(ul3));
     funkcja_lvalue(3000);
-
-    //lvalue zwykla referencja moze przyjac tylko lwartosci: przyjmuje ul3, a 3000 nie przyjmuje
+    
+    //lvalue zwykla referencja moze przyjac tylko lwartosci: przyjmuje ul3, a std::move(ul3) i 3000 nie przyjmuje
+    std::cout << "*funkcja_zwykla_lvalue*" << std::endl;
     funkcja_zwykla_lvalue(ul3);
+    //funkcja_zwykla_lvalue(std::move(ul3));
     //funkcja_zwykla_lvalue(3000);
 
-    //rvalue moze przyjac tylko rwartosci: przyjmuje 5000, a nie przyjmuje ul3
-    funkcja_rvalue(5000);
+    //rvalue moze przyjac tylko rwartosci: przyjmuje 5000 i std::move(ul3), a nie przyjmuje ul3
+    std::cout << "*funkcja_rvalue*" << std::endl;
     //funkcja_rvalue(ul3);
+    funkcja_rvalue(std::move(ul3));
+    funkcja_rvalue(5000);
+    
+    // punkt 25 - nie da się wywołać metody log obiektu implementowanej klasy,
+    // ponieważ poprzez napisanie "class Ul: Logger" wszyscy członkowie klasy
+    // Logger stają się prywatni w klasie która dziedziczy po klasie Logger
+    //ul3.log("Hello world!");
 
     return 0;
 }

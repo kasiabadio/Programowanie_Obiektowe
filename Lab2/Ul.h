@@ -1,10 +1,11 @@
 #ifndef UL_H_
 #define UL_H_
+#include "Logger.h"
 #include <string>
 #include <iostream>
 #include <vector>
 
-class Ul{
+class Ul: Logger{
 public:
     Ul();
     Ul(int _startowa_liczba_pszczol);
