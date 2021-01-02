@@ -1,5 +1,6 @@
 #include "Ul.h"
 #include "Logger.h"
+#include "Stopper.h"
 #include <string>
 #include <iostream>
 #include <typeinfo>
@@ -124,11 +125,26 @@ int main()
     //funkcja_rvalue(ul3);
     funkcja_rvalue(std::move(ul3));
     funkcja_rvalue(5000);
-
+    std::cout << std::endl;
     // punkt 25 - nie da się wywołać metody log obiektu implementowanej klasy,
     // ponieważ poprzez napisanie "class Ul: Logger" wszyscy członkowie klasy
     // Logger stają się prywatni w klasie która dziedziczy po klasie Logger
     //ul3.log("Hello world!");
 
+    // punkt 31
+    Ul ul4(825);
+    ul4.zmiana_liczby_pszczol(122);
+    ul4.ustaw_koordynaty(4,123);
+    ul4.zaktualizuj_miod(2828.2);
+    ul4.okresl_nazwe_pasieki("Chatka Puchatka");
+    ul4.zaktualizuj_wlasciciela("Hanka", "Mostowiak");
+    ul4.print_time_stopper();
+    std::cout << std::endl;
+
+    //punkt 32
+    // lepiej nie używać dziedziczenia z wielu klas, ponieważ konplikuje to kod,
+    // mogą być problemy z sytuacją gdy obie klasy z których się dziedziczy mają te same funkcje (tzw. diamond problem)
+    // w Javie nie ma tego problemu, ponieważ w tym języku możliwe jest tylko dziedziczenie z jednej klasy, w zamian
+    // są stosowane interfejsy - służą on zakodowaniu podobieństw pomiędzy różnymi klasami mających podobne funkcje
     return 0;
 }
