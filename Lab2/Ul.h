@@ -10,7 +10,7 @@ public:
     Ul();
     Ul(int _startowa_liczba_pszczol);
     Ul(const Ul &ul);
-    Ul(const Ul &&ul);
+    Ul(Ul &&ul);
     bool zmiana_liczby_pszczol(int _liczba);
     int odczytaj_liczbe_pszczol() const;
     void zaktualizuj_miod(float _ilosc_miodu);

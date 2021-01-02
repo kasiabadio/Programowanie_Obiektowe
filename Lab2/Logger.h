@@ -1,7 +1,8 @@
 #ifndef LOGGER_H_
 #define LOGGER_H_
 #include <string>
-#include <time.h>
+#include <ctime>
+#include <iostream>
 
 class Logger{
 public:

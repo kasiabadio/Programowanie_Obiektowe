@@ -52,7 +52,7 @@ Ul::Ul(const Ul &ul) : Ul()
 }
 
 // konstruktor przenoszący
-Ul::Ul(const Ul &&ul) : liczba_pszczol(std::move(ul.liczba_pszczol)),
+Ul::Ul(Ul &&ul) : liczba_pszczol(std::move(ul.liczba_pszczol)),
                         x(std::move(ul.x)),
                         y(std::move(ul.y)),
                         ilosc_miodu(std::move(ul.ilosc_miodu)),
@@ -60,6 +60,13 @@ Ul::Ul(const Ul &&ul) : liczba_pszczol(std::move(ul.liczba_pszczol)),
                         imie_wlasciciela(std::move(ul.imie_wlasciciela)),
                         nazwisko_wlasciciela(std::move(ul.nazwisko_wlasciciela))
 {
+    ul.liczba_pszczol = nullptr;
+    ul.x = nullptr;
+    ul.y = nullptr;
+    ul.ilosc_miodu = nullptr;
+    ul.nazwa_pasieki = nullptr;
+    ul.imie_wlasciciela = nullptr;
+    ul.nazwisko_wlasciciela = nullptr;
 }
 
 bool Ul::zmiana_liczby_pszczol(int _liczba)
@@ -81,6 +88,7 @@ int Ul::odczytaj_liczbe_pszczol() const
 
 void Ul::ustaw_koordynaty(int _x, int _y)
 {
+    this->log("ustaw_koordynaty");
     *x = _x;
     *y = _y;
 }
@@ -95,6 +103,7 @@ std::vector<int> Ul::odczytaj_koordynaty() const
 
 void Ul::zaktualizuj_miod(float _ilosc_miodu)
 {
+    this->log("zaktualizuj_miod");
     *ilosc_miodu += _ilosc_miodu;
 }
 
@@ -105,6 +114,7 @@ float Ul::odczytaj_miod() const
 
 bool Ul::okresl_nazwe_pasieki(std::string _nazwa_pasieki)
 {
+    this->log("okresl_nazwe_pasieki");
     char c = _nazwa_pasieki[0];
     if (isupper(c))
     {
@@ -121,6 +131,7 @@ std::string Ul::odczytaj_nazwe_pasieki() const
 
 void Ul::zaktualizuj_wlasciciela(std::string _imie, std::string _nazwisko)
 {
+    this->log("zaktualizuj_wlasciciela");
     *imie_wlasciciela = _imie;
     *nazwisko_wlasciciela = _nazwisko;
 }

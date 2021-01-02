@@ -16,8 +16,9 @@ Logger::~Logger()
 }
 
 void Logger::log(std::string _znaki){
-    time_t t;
+    time_t t = time(0);
+    char* date_time = ctime(&t);
     if(can_log){
-        printf("%s %s\n", ctime(&t), _znaki);
+        std::cout << std::endl << _znaki << " " << date_time;
     }
 }
