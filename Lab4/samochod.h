@@ -3,7 +3,8 @@
 #include <string>
 #include <stdbool.h>
 
-class Samochod{
+class Samochod
+{
 public:
     Samochod();
     Samochod(float _pojemnosc_baku, std::string _model);
@@ -17,17 +18,17 @@ public:
     operator bool() const;
     bool operator!() const;
     // używając friend, klasa ma dostęp do zmiennych prywatnych klasy Samochod
-    friend std::ostream& operator<<(std::ostream &os, const Samochod &samochod);
+    friend std::ostream &operator<<(std::ostream &os, const Samochod &samochod);
     bool operator<(const Samochod &samochod) const;
     void operator++();
-
+    void operator|=(int _liczba_kilometrow);
+    void operator,(int _pojemnosc_baku);
 
 private:
     float pojemnosc_baku;
     float poziom_paliwa;
     unsigned int liczba_kilometrow;
     std::string model;
-
 };
 
 #endif // SAMOCHOD_H_
