@@ -16,7 +16,8 @@ Osoba::Osoba() : imie{nullptr},
 
 // konstruktor kopiujący
 Osoba::Osoba(const Osoba &osoba) : Osoba()
-{
+{   
+    ustaw_adres(*osoba.ulica, *osoba.nr_domu, *osoba.nr_mieszkania);
     *imie = *osoba.imie;
     *nazwisko = *osoba.nazwisko;
     *data = *osoba.data;
@@ -35,6 +36,7 @@ Osoba::Osoba(Osoba &&osoba):
     nazwisko(std::move(osoba.nazwisko)),
     data(std::move(osoba.data))
 {
+    ustaw_adres(std::move(*osoba.ulica), std::move(*osoba.nr_domu), std::move(*osoba.nr_mieszkania));
     osoba.imie = nullptr;
     osoba.nazwisko = nullptr;
     osoba.data = nullptr;
@@ -95,5 +97,5 @@ Osoba::~Osoba()
     delete this->imie;
     delete this->nazwisko;
     delete this->data;
-    std::cout << "Wywolanie destruktora klasy Osoba!" << std::endl;
+    //std::cout << "Wywolanie destruktora klasy Osoba!" << std::endl;
 }

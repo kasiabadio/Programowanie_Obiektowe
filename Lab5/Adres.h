@@ -5,13 +5,17 @@
 
 class Adres{
 public:
+    Adres();
+    Adres(const Adres& adres);
     bool ustaw_adres(std::string _ulica, int _nr_domu, int _nr_mieszkania);
     std::string odczytaj_adres() const;
+    ~Adres();
 
-private:
-    std::string ulica;
-    int nr_domu;
-    int nr_mieszkania;
+
+protected:
+    std::string *ulica;
+    int *nr_domu;
+    int *nr_mieszkania;
     
 };
 

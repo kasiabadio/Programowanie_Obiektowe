@@ -1,6 +1,7 @@
 #include "Przedmiot.h"
 #include <sstream>
 
+
 bool Przedmiot::dodaj_ocene(int _ocena)
 {
     if(_ocena > 5 || _ocena < 1){

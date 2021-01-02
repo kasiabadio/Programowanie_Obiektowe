@@ -18,7 +18,7 @@ public:
     std::string odczytaj_imie() const;
     std::string odczytaj_nazwisko() const;
     std::string odczytaj_date() const;
-    ~Osoba();
+    virtual ~Osoba();
 
 private:
     std::string *imie;

@@ -1,11 +1,15 @@
 #include <iostream>
 #include <sstream>
 #include <stdbool.h>
+#include <map>
 #include "Osoba.h"
 #include "Adres.h"
 #include "Student.h"
 #include "Przedmiot.h"
 #include "Pracownik.h"
+#include "FabrykaOsob.h"
+#include "FabrykaStudentow.h"
+#include "FabrykaPracownikow.h"
 
 void foo(Osoba &os)
 {
@@ -183,6 +187,7 @@ int main()
     dlatego musi być zdefiniowana przez klasę która dziedziczy po klasie bazowej
     */
 
+   // konstruktory OSOBA
     std::cout << std::endl <<  "*Konstruktor kopiujacy dla klasy Osoba*" << std::endl;
     Osoba osoba_kopia(osoba);
     std::cout << osoba_kopia.odczytaj_imie() << std::endl;
@@ -200,6 +205,61 @@ int main()
     std::cout << osoba_przen.odczytaj_imie() << std::endl;
     std::cout << osoba_przen.odczytaj_nazwisko() << std::endl;
     std::cout << osoba_przen.odczytaj_date() << std::endl;
+    
 
+    // konstruktory STUDENT
+    std::cout << std::endl <<  "*Konstruktor kopiujacy dla klasy Student*" << std::endl;
+    Student student_kopia(student);
+    std::cout << student_kopia.przedstaw() << std::endl;
+    
+    std::cout <<  "*Konstruktor przenoszacy dla klasy Student*" << std::endl;
+    Student student_przen(std::move(student_kopia));
+    std::cout << student_przen.przedstaw() << std::endl;
+
+    // konstruktory PRACOWNIK
+    std::cout << std::endl <<  "*Konstruktor kopiujacy dla klasy Pracownik*" << std::endl;
+    Pracownik pracownik_kopia(pracownik);
+    std::cout << pracownik_kopia.przedstaw() << std::endl;
+
+    std::cout <<  "*Konstruktor przenoszacy dla klasy Pracownik*" << std::endl;
+    Pracownik pracownik_przen(pracownik_kopia);
+    std::cout << pracownik_przen.przedstaw() << std::endl;
+
+    
+    FabrykaStudentow fabryka_studentow;
+    for(int i = 0; i < 3; i++){
+        Student *st = fabryka_studentow.utworz();
+        st->ustaw_imie_nazwisko("Student", "Przecietny");
+        st->ustaw_date(1999, 6, 20);
+        st->ustaw_adres("Bialowieska", 8, 99);
+        std::cout << st->przedstaw() << std::endl;
+    }
+
+    FabrykaPracownikow fabryka_pracownikow;
+    for(int i = 0; i < 3; i++){
+        Pracownik *pr = fabryka_pracownikow.utworz();
+        pr->ustaw_imie_nazwisko("Nauczyciel", "Pasjonata");
+        pr->ustaw_date(1967, 9, 10);
+        pr->ustaw_adres("Parkowa", 21, 8);
+        std::cout << pr->przedstaw() << std::endl;
+    }
+
+    std::map<std::string, FabrykaOsob*> m;
+    m["pracownik"] = new FabrykaPracownikow();
+    m["student"] = new FabrykaStudentow();
+
+    std::cout << "Wpisz: pracownik / student" << std::endl;
+    std::cout << "Zeby wyjsc wpisz dowolny ciag znakow" << std::endl;
+    std::vector<Osoba*> tablica_osob;
+    std::string current_command;
+    while(std::cin){
+        std::getline(std::cin, current_command);
+        if(current_command != "pracownik" && current_command != "student"){
+            break;
+        }
+        tablica_osob.push_back(m[current_command]->utworz());
+    }
+
+    
     return 0;
 }

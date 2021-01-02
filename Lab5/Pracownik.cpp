@@ -3,6 +3,22 @@
 #include <iostream>
 #include <iterator>
 
+// konstruktor domyślny
+Pracownik::Pracownik()
+{}
+
+// konstruktor kopiujący
+Pracownik::Pracownik(const Pracownik &pracownik) : Osoba(pracownik)
+{
+    przedmioty = pracownik.przedmioty;
+}
+
+// konstruktor przenoszący
+Pracownik::Pracownik(Pracownik &&pracownik) : Osoba(std::move(pracownik))
+{
+    przedmioty = std::move(pracownik.przedmioty);
+}
+
 bool Pracownik::dodaj_przedmiot(std::string _przedmiot)
 {
     for (int i = 0; i < przedmioty.size(); i++)

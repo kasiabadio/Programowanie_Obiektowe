@@ -3,6 +3,25 @@
 #include <iostream>
 #include <iterator>
 
+// konstruktor domyślny
+Student::Student()
+{}
+
+// konstruktor kopiujący
+Student::Student(const Student &student): Osoba(student)
+{
+    przedmioty_oceny = student.przedmioty_oceny;
+    
+}
+
+// konstruktor przenoszący
+Student::Student(Student &&student) : Osoba(std::move(student))
+{
+    
+    przedmioty_oceny = std::move(student.przedmioty_oceny);
+}
+
+
 bool Student::dodaj_ocene_z_przedmiotu(std::string _przedmiot, int _ocena)
 {
     for (int i = 0; i < przedmioty_oceny.size(); i++)

@@ -7,11 +7,15 @@
 class Pracownik : public Osoba
 {
 public:
+    Pracownik();
+    Pracownik(const Pracownik &pracownik);
+    Pracownik(Pracownik &&pracownik);
     bool dodaj_przedmiot(std::string _przedmiot);
     bool usun_przedmiot(std::string _przedmiot);
     bool sprawdz_czy_prowadzi_przedmiot(std::string _przedmiot);
     std::string odczytaj_prowadzone_przedmioty();
     std::string przedstaw();
+
 
 private:
     std::vector<std::string> przedmioty;
