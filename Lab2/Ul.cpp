@@ -10,6 +10,13 @@ Ul::Ul() : liczba_pszczol{nullptr},
            imie_wlasciciela{nullptr},
            nazwisko_wlasciciela{nullptr}
 {
+    liczba_pszczol = new int;
+    x = new int;
+    y = new int;
+    ilosc_miodu = new float;
+    nazwa_pasieki = new std::string;
+    imie_wlasciciela = new std::string;
+    nazwisko_wlasciciela = new std::string;
     reset_time_stopper();
 }
 
@@ -18,19 +25,12 @@ Ul::Ul() : liczba_pszczol{nullptr},
 Ul::Ul(int _startowa_liczba_pszczol) : Ul()
 {
     reset_time_stopper();
-    liczba_pszczol = new int;
     *liczba_pszczol = _startowa_liczba_pszczol;
-    x = new int;
     *x = 0;
-    y = new int;
     *y = 0;
-    ilosc_miodu = new float;
     *ilosc_miodu = 0.00;
-    nazwa_pasieki = new std::string;
     *nazwa_pasieki = "Pasieka pod klonem";
-    imie_wlasciciela = new std::string;
     *imie_wlasciciela = "Kasia";
-    nazwisko_wlasciciela = new std::string;
     *nazwisko_wlasciciela = "Badio";
 }
 
@@ -38,19 +38,12 @@ Ul::Ul(int _startowa_liczba_pszczol) : Ul()
 Ul::Ul(const Ul &ul) : Ul()
 {
     reset_time_stopper();
-    liczba_pszczol = new int;
     *liczba_pszczol = *ul.liczba_pszczol;
-    x = new int;
     *x = *ul.x;
-    y = new int;
     *y = *ul.y;
-    ilosc_miodu = new float;
     *ilosc_miodu = *ul.ilosc_miodu;
-    nazwa_pasieki = new std::string;
     *nazwa_pasieki = *ul.nazwa_pasieki;
-    imie_wlasciciela = new std::string;
     *imie_wlasciciela = *ul.imie_wlasciciela;
-    nazwisko_wlasciciela = new std::string;
     *nazwisko_wlasciciela = *ul.nazwisko_wlasciciela;
 }
 

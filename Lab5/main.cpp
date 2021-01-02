@@ -30,7 +30,7 @@ int main()
     std::cout << odczytane_in << std::endl;
 
     // ustawienie daty
-    bool czy_ustawiona_data = osoba.ustaw_date(2020, 2, 12);
+    bool czy_ustawiona_data = osoba.ustaw_date(1999, 2, 12);
     if (czy_ustawiona_data == true)
     {
         std::cout << osoba.odczytaj_date() << std::endl;
@@ -167,16 +167,39 @@ int main()
     /*punkt 17*/
     Osoba *o5 = new Osoba;
     Pracownik *p5 = dynamic_cast<Pracownik *>(o5); // p5 to nullptr, niepoprawne 
-    if (p5 == nullptr) 
+    if (p5 == nullptr) // należy unikać, ponieważ
         std::cout << "Blad rzutowania!" << std::endl;
     else
         p5->odczytaj_prowadzone_przedmioty();
 
 
-    /*punkt 18, 19
+    /*punkt 19
     po zamianie definicji funkcji przedstaw nie da się skompilować projektu
+    obiekt typu klasy abstrakcyjnej "Osoba" jest niedozwolony: -- funkcja "Osoba::przedstaw" to czysta funkcja wirtualna
+    wykomentowanie kodu, gdzie tworzone są obiekty klasy Osoba, pozwala na uruchomienie kodu, gdy definicja funkcji przedstaw 
+    w klasie Osoba jest następująca: virtual std::string przedstaw() = 0;
+
+    pure virtual function nie jest definiowana przez klasę bazową
+    dlatego musi być zdefiniowana przez klasę która dziedziczy po klasie bazowej
     */
 
-   
+    std::cout << std::endl <<  "*Konstruktor kopiujacy dla klasy Osoba*" << std::endl;
+    Osoba osoba_kopia(osoba);
+    std::cout << osoba_kopia.odczytaj_imie() << std::endl;
+    std::cout << osoba_kopia.odczytaj_nazwisko() << std::endl;
+    std::cout << osoba_kopia.odczytaj_date() << std::endl;
+
+    std::cout <<  "*Konstruktor konwertujacy dla klasy Osoba*" << std::endl;
+    Osoba osoba_konw("Andzelika", "Kowalska");
+    std::cout << osoba_konw.odczytaj_imie() << std::endl;
+    std::cout << osoba_konw.odczytaj_nazwisko() << std::endl;
+    std::cout << osoba_konw.odczytaj_date() << std::endl;
+
+    std::cout <<  "*Konstruktor przenoszacy dla klasy Osoba*" << std::endl;
+    Osoba osoba_przen(std::move(osoba_kopia));
+    std::cout << osoba_przen.odczytaj_imie() << std::endl;
+    std::cout << osoba_przen.odczytaj_nazwisko() << std::endl;
+    std::cout << osoba_przen.odczytaj_date() << std::endl;
+
     return 0;
 }
