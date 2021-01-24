@@ -16,7 +16,6 @@ class AccountLoginFailedException extends Exception{
         password = _password;
     }
 
-
     Customer getCustomer(){ return owner; }
 
     String getLogin(){
