@@ -17,7 +17,7 @@ public class Account {
         login = _login;
     }
 
-    public void login(String _login, int _password) throws AccountLoginFailedException{
+    public void login(Customer _owner, String _login, int _password) throws AccountLoginFailedException{
         int checksum = 0;
 
         if (login.equals(_login)){
@@ -37,7 +37,7 @@ public class Account {
         if (checksum == 2){
             System.out.println("Logowanie powiodło się\n");
         }else{
-            throw new AccountLoginFailedException("Logowanie nie powiodło się\n", _login, _password);
+            throw new AccountLoginFailedException("Logowanie nie powiodło się\n", _owner, _login, _password);
         }
 
     }

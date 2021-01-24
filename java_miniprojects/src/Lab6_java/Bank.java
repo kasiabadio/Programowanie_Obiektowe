@@ -1,4 +1,5 @@
 package Lab6_java;
+import Lab6_java.Customer.*;
 
 import java.util.ArrayList;
 

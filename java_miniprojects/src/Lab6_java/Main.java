@@ -33,8 +33,8 @@ public class Main {
 
         // testowanie klasy Account
         Account account1 = new Account(1, customer1, 1234, "ko_julia");
-        account1.login("ko_julia", 1234);
-        //account1.login("k_julia", 1234);
+        account1.login(customer1, "ko_julia", 1234);
+        // account1.login(customer1, "k_julia", 1234);
 
 
     }

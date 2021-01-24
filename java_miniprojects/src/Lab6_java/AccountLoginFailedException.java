@@ -7,17 +7,15 @@ class AccountLoginFailedException extends Exception{
     private String login;
 
     AccountLoginFailedException(){}
-    AccountLoginFailedException(Customer _owner, int _password, String _login){
+
+    // Create a constructor with String parameter which is the detail message of the exception
+    AccountLoginFailedException(String errorMsg, Customer _owner, String _login, int _password){
+        super(errorMsg); // call the super constructor and pass a message
         owner = _owner;
-        password = _password;
         login = _login;
+        password = _password;
     }
 
-    AccountLoginFailedException(String errorMsg, String _login, int _password){
-        super(errorMsg);
-        login = _login;
-        password = _password;
-    }
 
     Customer getCustomer(){ return owner; }
 

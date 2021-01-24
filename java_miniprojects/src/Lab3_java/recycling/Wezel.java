@@ -4,8 +4,8 @@ import java.util.*;
 
 public class Wezel {
     ArrayList<Wezel> polaczenia = new ArrayList<>();
-    HashMap<Wezel, Boolean> polaczenia_hashmap = new HashMap<>();
-    TreeMap<Wezel, Boolean> polaczenia_treemap;
+    public HashMap<Wezel, Boolean> polaczenia_hashmap = new HashMap<>();
+    //public Map<Wezel, Boolean> polaczenia_treemap = new TreeMap<Object, Boolean>();
 
 
     @Deprecated
