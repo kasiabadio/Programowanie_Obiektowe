@@ -66,6 +66,12 @@ public class Main {
         bank.addToAccountList(customer3);
         bank.addToAccountList(customer1);
         bank.addToAccountList(customer);
+        int p = 0;
+        while (p < bank.account_array.size()){
+            System.out.println(bank.account_array.get(p).getNumber() + " ");
+            p++;
+        }
+        System.out.println("\n");
 
         ArrayList<Account> a_arr;
         a_arr = bank.findAllCustomerAccounts(customer);
@@ -75,6 +81,11 @@ public class Main {
             i++;
         }
         System.out.println("\n");
+
+        Account acc = bank.findByNumber(bank.account_array.get(0).getNumber());
+        System.out.println(acc.getNumber());
+        //bank.findByNumber(1234);
+
 
     }
 }

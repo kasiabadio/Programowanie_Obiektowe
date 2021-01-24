@@ -1,5 +1,4 @@
 package Lab6_java;
-import java.util.ArrayList;
 
 public class Customer {
     private String name;
