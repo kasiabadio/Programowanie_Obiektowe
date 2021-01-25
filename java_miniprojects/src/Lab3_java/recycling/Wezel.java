@@ -41,7 +41,6 @@ public class Wezel {
             w3.dodajPolaczenieHashmap(w4, true);
             w4.dodajPolaczenieHashmap(w3, true);
 
-            // treemap
 
         }
         scanner.nextLine();
@@ -49,10 +48,3 @@ public class Wezel {
     }
 
 }
-
-
-// przed zamianą nie wyświetla się Finalizowanie Obiektu
-// po zamianie z 10000 na 1000000 iteracji, wyświetla się Finalizowanie Obiektu
-// zadanie 11 - czemu pomimo tego, że do poszczególnych węzłów nadal są odwołania odśmiecacz je usunął?
-// zadanie 12 - czemu tradycyjna tablica obiektów typu Wezel nie byłaby najlepszym wyborem?
-// zadanie 13 - hashmap & treemap

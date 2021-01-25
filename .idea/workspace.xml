@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7af517f0-2518-4f9d-971e-3c4b8f227da3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Programowanie_Obiektowe.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpp_miniprojects/.vscode/c_cpp_properties.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpp_miniprojects/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpp_miniprojects/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpp_miniprojects/.vscode/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpp_miniprojects/Lab1/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpp_miniprojects/Lab1/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpp_miniprojects/Lab1/.vscode/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpp_miniprojects/Lab7/main.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_miniprojects/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_miniprojects/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_miniprojects/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_miniprojects/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_miniprojects/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_miniprojects/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_miniprojects/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_miniprojects/out/production/Obiektowe/Lab3_java/recycling/Wezel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_miniprojects/out/production/Obiektowe/Lab6_java/Account.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_miniprojects/out/production/Obiektowe/Lab6_java/AccountLoginFailedException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_miniprojects/out/production/Obiektowe/Lab6_java/AccountNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_miniprojects/out/production/Obiektowe/Lab6_java/Bank.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_miniprojects/out/production/Obiektowe/Lab6_java/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_miniprojects/out/production/Obiektowe/Lab6_java/CustomerNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_miniprojects/out/production/Obiektowe/Lab6_java/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_miniprojects/out/production/Obiektowe/Lab6_java/SearchAccounts.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_miniprojects/out/production/Obiektowe/Lab6_java/SearchCustomers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_miniprojects/src/Lab3_java/recycling/Wezel.java" beforeDir="false" afterPath="$PROJECT_DIR$/java_miniprojects/src/Lab3_java/recycling/Wezel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programowanie_Obiektowe/Lab3_java/recycling/Wezel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programowanie_Obiektowe/Lab6_java/Account.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programowanie_Obiektowe/Lab6_java/AccountLoginFailedException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programowanie_Obiektowe/Lab6_java/AccountNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programowanie_Obiektowe/Lab6_java/Bank.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programowanie_Obiektowe/Lab6_java/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programowanie_Obiektowe/Lab6_java/CustomerNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programowanie_Obiektowe/Lab6_java/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programowanie_Obiektowe/Lab6_java/SearchAccounts.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programowanie_Obiektowe/Lab6_java/SearchCustomers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programowanie_Obiektowe/Lab7_java/Checker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programowanie_Obiektowe/Lab7_java/GenericsType$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programowanie_Obiektowe/Lab7_java/GenericsType.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1nLxF6vbkosclCFg2LtELy3UaWM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager" selected="Application.Wezel">
+    <configuration name="GenericsType" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lab7_java.GenericsType" />
+      <module name="Programowanie_Obiektowe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lab7_java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lab6_java.Main" />
+      <module name="Programowanie_Obiektowe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lab6_java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Wezel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lab3_java.recycling.Wezel" />
+      <module name="Programowanie_Obiektowe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lab3_java.recycling.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Wezel" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.GenericsType" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7af517f0-2518-4f9d-971e-3c4b8f227da3" name="Default Changelist" comment="" />
+      <created>1611183069182</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611183069182</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
